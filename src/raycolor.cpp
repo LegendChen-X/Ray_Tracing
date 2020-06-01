@@ -35,5 +35,7 @@ bool raycolor(
         return true;
     }
     
+    rgb = Eigen::Vector3d(0,0,0);
+    
     return false;
 }
