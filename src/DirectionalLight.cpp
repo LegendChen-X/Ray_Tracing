@@ -4,7 +4,7 @@
 void DirectionalLight::direction(
   const Eigen::Vector3d & q, Eigen::Vector3d & d, double & max_t) const
 {
-    max_t = max_t = (double)0xFFFFFFFFFFFFFFFF;
+    max_t = std::numeric_limits<double>::infinity();
     
     d = (-this->d).normalized;
 }

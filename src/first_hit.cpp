@@ -8,7 +8,7 @@ bool first_hit(
   double & t,
   Eigen::Vector3d & n)
 {
-    double distance_buff = (double)0xFFFFFFFF;
+    double distance_buff = std::numeric_limits<double>::infinity();
     double t_buff;
     
     Eigen::Vector3d v_buff;
