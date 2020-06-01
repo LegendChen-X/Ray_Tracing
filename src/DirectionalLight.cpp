@@ -6,6 +6,6 @@ void DirectionalLight::direction(
 {
     max_t = std::numeric_limits<double>::infinity();
     
-    d = (-this->d).normalized;
+    d = (-this->d).normalized();
 }
 

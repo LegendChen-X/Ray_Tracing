@@ -11,11 +11,13 @@ bool raycolor(
   const int num_recursive_calls,
   Eigen::Vector3d & rgb)
 {
-    if(num_recursive_calls>10) return false;
+    if(num_recursive_calls==10) return false;
+    
+    rgb = Eigen::Vector3d(0,0,0);
     
     int hit_id;
-    
     double t;
+    Eigen::Vector3d n;
     
     if(first_hit(ray,min_t,objects,hit_id,t,n))
     {
@@ -34,8 +36,6 @@ bool raycolor(
         
         return true;
     }
-    
-    rgb = Eigen::Vector3d(0,0,0);
     
     return false;
 }

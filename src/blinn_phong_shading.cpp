@@ -28,7 +28,7 @@ Eigen::Vector3d blinn_phong_shading(
     {
         Eigen::Vector3d d;
         double max_t;
-        lights[i]->direction(q,d,max_t)
+        lights[i]->direction(q,d,max_t);
         
         Ray shadow;
         shadow.origin = q;
