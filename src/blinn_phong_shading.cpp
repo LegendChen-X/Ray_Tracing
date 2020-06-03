@@ -12,7 +12,6 @@ Eigen::Vector3d blinn_phong_shading(
   const std::vector< std::shared_ptr<Object> > & objects,
   const std::vector<std::shared_ptr<Light> > & lights)
 {
-    
     Eigen::Vector3d rgb = Eigen::Vector3d(0,0,0);
     
     Eigen::Vector3d ka = objects[hit_id]->material->ka;
